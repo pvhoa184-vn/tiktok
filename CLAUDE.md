@@ -5,7 +5,7 @@ Trả lời người dùng bằng **tiếng Việt**. Kế hoạch đầy đủ 
 ## Các quyết định đã chốt
 - **Định vị:** "Đồng hành tâm lý 90 ngày đầu tập gym: từ sợ bước vào đến không muốn bỏ." Thị trường **Việt Nam** trước, có thể làm kênh tiếng Anh sau.
 - **Công cụ dựng:** HyperFrames (HTML → MP4), khổ dọc 1080×1920, 30fps. Mẫu dựng sẵn ở `videos/_starter/` đã có GSAP và font Be Vietnam Pro chép sẵn trong thư mục. **Không tải từ CDN**, vì môi trường cloud chặn jsdelivr và Hugging Face. Mạng đã mở thêm `pexels.com`, `*.pexels.com`.
-- **Giọng đọc:** VieNeu-TTS (`pip install vieneu`, bản v3 Turbo, mã nguồn Apache 2.0), nhân bản giọng người dùng từ 3–8 giây thu âm. TTS tích hợp của HyperFrames (Kokoro) không có tiếng Việt.
+- **Giọng đọc:** VieNeu-TTS (`pip install vieneu`, bản v3 Turbo, mã nguồn Apache 2.0), **ưu tiên giọng có sẵn** (25 giọng, `--voice "Tên"`, xem `--list-voices`) làm "giọng của Bé Đậu"; nhân bản giọng người dùng (`--ref`) là phương án phụ. Mẫu nghe thử trong `assets/voice/mau-nghe-thu/`. TTS tích hợp của HyperFrames (Kokoro) không có tiếng Việt.
 - **Phụ đề:** dùng `hyperframes init <ten> --audio giong.mp3 --language vi --model small --resolution portrait` (Whisper đa ngôn ngữ, không dùng bản `.en`).
 - **Hình ảnh mỗi cảnh có 3 lớp:** nền là B-roll Pexels trong `assets/broll/` (thẻ `<video class="clip" muted>` ở track 0, CSS `filter:blur(7px) brightness(.32)`), minh hoạ là **nhân vật Bé Đậu** (PNG 3D) cùng icon 3D Fluent Emoji, trên cùng là chữ và phụ đề karaoke.
 - **Nhận diện:** nền `#0b0b0f`, chữ trắng, một màu nhấn xanh chanh `#c6ff3d`. Tránh 250px dưới cùng và cột 150px bên phải (nút của TikTok).
@@ -30,6 +30,6 @@ Trả lời người dùng bằng **tiếng Việt**. Kế hoạch đầy đủ 
 - [x] Vẽ 3 phương án nhân vật (SVG, mỗi nhân vật có bản "ngại" và "tự tin") trong `assets/nhan-vat/`, bảng so sánh `bang-so-sanh.png`: A. Bé Đậu, B. Cậu Hoodie, C. Tạ Tí
 - [x] Người dùng chê nét vẽ SVG tay là xấu. Đã chuyển sang **icon 3D Fluent Emoji của Microsoft** (MIT) trong `assets/icons-3d/`, tải từ `raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/<Tên>/3D/<ten>_3d.png` (đi được qua proxy). 
 - [x] **Chốt nhân vật Bé Đậu**: người dùng tạo bằng ChatGPT (hạt đậu kem 3D, băng đô xanh chanh), đã tách thành 6 PNG trong suốt.  Cần tư thế mới thì người dùng tạo thêm trên ChatGPT với ảnh gốc làm tham chiếu ("same character, ..., plain white background"), rồi chạy `tach_nen.py`.
-- [ ] Chạy `python scripts/tao_giong.py --ref assets/voice/mau.m4a --file videos/01-ngai-lan-dau/loi_doc.txt --out videos/01-ngai-lan-dau/giong.wav` trên máy local
+- [ ] Người dùng chọn giọng có sẵn, rồi chạy `python scripts/tao_giong.py --voice "<Tên>" --file videos/01-ngai-lan-dau/loi_doc.txt --out videos/01-ngai-lan-dau/giong.wav` trên máy local
 - [ ] Dựng video #1 (kịch bản ở mục 6 của `KE_HOACH_KENH.md`)
 - [x] Cảnh nền: lấy từ Pexels. Tải không cần API key qua `https://www.pexels.com/download/video/<ID>/` (chuyển hướng sang videos.pexels.com); tìm ID bằng WebSearch giới hạn ở pexels.com. Trang tìm kiếm Pexels bị Cloudflare chặn (403). Video phải mã hoá lại với `-g 30 -keyint_min 30`, nếu không HyperFrames báo lỗi keyframe thưa và hình bị đứng. Demo đủ 3 lớp: `videos/01-ngai-lan-dau/demo-co-nen.mp4`
