@@ -4,3 +4,4 @@ renders/
 .DS_Store
 *.ref.wav
 *.tmp.wav
+__pycache__/
