@@ -29,75 +29,65 @@ html,body{width:1080px;height:1920px;overflow:hidden;background:#0b0b0f}
 .think .b:before{content:"";position:absolute;width:18px;height:18px;border-radius:50%;background:rgba(255,255,255,.94);left:43%;bottom:-78px}
 .think .w{display:inline-block;margin:0 .12em;opacity:0}
 /* lời nói của anh cơ bắp */
-.say{position:absolute;background:#c6ff3d;color:#0b0b0f;border-radius:40px;padding:22px 34px;font-size:54px;font-weight:900;
-  box-shadow:0 12px 30px rgba(0,0,0,.4);white-space:nowrap}
-.say:after{content:"";position:absolute;left:310px;bottom:-30px;border:18px solid transparent;border-top:24px solid #c6ff3d;border-bottom:0}
-.eye{position:absolute;width:150px;height:150px;opacity:0}
-.small{position:absolute;left:80px;right:180px;bottom:300px;text-align:center;font-size:44px;font-weight:600;line-height:1.35;
-  background:rgba(11,11,15,.78);border-radius:28px;padding:28px 32px;color:#e4e4e7}
-.small b{color:#c6ff3d;font-weight:900}
-.small i{font-style:normal;font-size:34px;color:#a1a1aa;display:block;margin-top:10px}
+.say{position:absolute;background:#c6ff3d;color:#0b0b0f;border-radius:44px;padding:26px 38px;font-size:56px;font-weight:900;line-height:1.2;
+  box-shadow:0 12px 30px rgba(0,0,0,.4);text-align:center}
+.say:after{content:"";position:absolute;left:180px;bottom:-30px;border:18px solid transparent;border-top:24px solid #c6ff3d;border-bottom:0}
+.say .w{display:inline-block;margin:0 .1em;opacity:0}
 </style>
 </head>
 <body>
-<div id="root" data-composition-id="main" data-start="0" data-duration="27.4" data-width="1080" data-height="1920">
+<div id="root" data-composition-id="main" data-start="0" data-duration="28.6" data-width="1080" data-height="1920">
 
 <!-- A 0–2.4: nép sau cửa (clip Kling) -->
 <video id="vA" class="clip full" src="assets/clip/cua.mp4" muted playsinline data-start="0" data-duration="2.4" data-track-index="0"></video>
 <div id="sA" class="sc clip" data-start="0" data-duration="2.4" data-track-index="1"><div class="in"><div class="vig"></div>
   <h1 id="tPOV" class="big" style="top:250px;font-size:92px">POV: lần đầu bước vào <span>phòng gym</span></h1></div></div>
 
-<!-- B 2.4–6.4: giả vờ nghe điện thoại -->
-<div id="sB" class="sc clip" data-start="2.4" data-duration="4.0" data-track-index="0"><div class="in"><img class="full" src="assets/canh/dien-thoai.jpg"><div class="vig"></div>
+<!-- B 2.4–8.0: giả vờ nghe điện thoại -->
+<div id="sB" class="sc clip" data-start="2.4" data-duration="5.6" data-track-index="0"><div class="in"><img class="full" src="assets/canh/dien-thoai.jpg"><div class="vig"></div>
   <div id="th1" class="think" style="top:230px"><div class="b">Mười phút rồi. Vẫn chưa dám vào.</div></div>
   <div id="th2" class="think" style="top:230px"><div class="b">Giả vờ nghe điện thoại. Không ai gọi cả.</div></div></div></div>
 
-<!-- C 6.4–9.8: bước vào, mắt bay ra khắp nơi -->
-<div id="sC" class="sc clip" data-start="6.4" data-duration="3.4" data-track-index="0"><div class="in"><img class="full" src="assets/canh/buoc-vao.jpg"><div class="vig"></div>
-  <img class="eye" src="assets/icons/eyes_3d.png" style="left:60px;top:560px">
-  <img class="eye" src="assets/icons/eyes_3d.png" style="left:780px;top:600px">
-  <img class="eye" src="assets/icons/eyes_3d.png" style="left:110px;top:1060px">
-  <img class="eye" src="assets/icons/eyes_3d.png" style="left:800px;top:1100px">
-  <img class="eye" src="assets/icons/eyes_3d.png" style="left:430px;top:500px">
-  <img class="eye" src="assets/icons/eyes_3d.png" style="left:60px;top:1420px">
-  <img class="eye" src="assets/icons/eyes_3d.png" style="left:790px;top:1400px">
-  <div id="th3" class="think" style="top:230px"><div class="b">Thôi xong. Cả phòng đang nhìn mình.</div></div></div></div>
+<!-- C 8.0–10.4: cầm tạ ngược -->
+<div id="sC" class="sc clip" data-start="8.0" data-duration="2.4" data-track-index="0"><div class="in"><img class="full" src="assets/canh/ta-nguoc.jpg"><div class="vig"></div>
+  <div id="th3" class="think" style="top:230px"><div class="b">Cầm vậy là đúng chưa ta?</div></div></div></div>
 
-<!-- D 9.8–11.2: cầm tạ ngược -->
-<div id="sD" class="sc clip" data-start="9.8" data-duration="1.4" data-track-index="0"><div class="in"><img class="full" src="assets/canh/ta-nguoc.jpg"><div class="vig"></div></div></div>
+<!-- D 10.4–13.2: anh cơ bắp đi tới (clip Kling) -->
+<video id="vD" class="clip full" src="assets/clip/di-toi.mp4" muted playsinline data-start="10.4" data-duration="2.8" data-track-index="0"></video>
+<div id="sD" class="sc clip" data-start="10.4" data-duration="2.8" data-track-index="1"><div class="in"><div class="vig"></div>
+  <div id="th4" class="think" style="top:230px"><div class="b">Thôi xong. Ảnh đi về phía mình.</div></div></div></div>
 
-<!-- E 11.2–13.4: anh cơ bắp nhăn mặt -->
-<div id="sE" class="sc clip" data-start="11.2" data-duration="2.2" data-track-index="0"><div class="in"><img id="imE" class="full" src="assets/canh/co-bap-nhan.jpg"><div class="vig"></div>
-  <div id="th4" class="think" style="top:230px"><div class="b">Ảnh cười kìa. Chắc thấy mình cầm tạ ngược.</div></div></div></div>
+<!-- E 13.2–17.2: nhạc tắt, anh cơ bắp chỉnh tạ giúp (clip Kling) -->
+<video id="vE" class="clip full" src="assets/clip/chinh.mp4" muted playsinline data-start="13.2" data-duration="4.0" data-track-index="0"></video>
+<div id="sE" class="sc clip" data-start="13.2" data-duration="4.0" data-track-index="1"><div class="in"><div class="vig"></div>
+  <div id="say" class="say" style="left:80px;width:760px;top:250px">"Cầm thế này nè. Hồi đầu anh cũng cầm ngược."</div></div></div>
 
-<!-- F 13.4–19.2: nhạc tắt, thực tế -->
-<div id="sF" class="sc clip" data-start="13.4" data-duration="5.8" data-track-index="0"><div class="in"><img id="imF" class="full" src="assets/canh/thuc-te.jpg"><div class="vig"></div>
-  <h1 id="tTT" class="big" style="top:250px;font-size:96px">Thực tế: <span>không ai để ý.</span></h1>
-  <div id="say" class="say" style="left:250px;top:770px">"Mười một, mười hai."</div>
-  <div id="note" class="small">Người ta hay nghĩ mình bị nhìn <b>nhiều gấp khoảng đôi</b> so với thật<i>(Gilovich, Đại học Cornell, 2000)</i></div></div></div>
+<!-- F 17.2–20.6: Bé Đậu thở ra -->
+<div id="sF" class="sc clip" data-start="17.2" data-duration="3.4" data-track-index="0"><div class="in"><img id="imF" class="full" src="assets/canh/tha-ra.jpg"><div class="vig"></div>
+  <h1 id="tF1" class="big" style="top:230px;font-size:80px">Người tập lâu ai cũng từng <span>cầm ngược.</span></h1>
+  <h1 id="tF2" class="big" style="top:1330px;font-size:84px">Không biết thì <span>cứ hỏi.</span></h1></div></div>
 
-<!-- H 19.2–23.4: tai nghe, hiệp đầu tiên -->
-<video id="vH" class="clip full" src="assets/clip/tainghe.mp4" muted playsinline data-start="19.2" data-duration="4.2" data-track-index="0"></video>
-<div id="sH" class="sc clip" data-start="19.2" data-duration="4.2" data-track-index="1"><div class="in"><div class="vig"></div>
+<!-- G 20.6–24.6: tai nghe, hiệp đầu tiên -->
+<video id="vG" class="clip full" src="assets/clip/tainghe.mp4" muted playsinline data-start="20.6" data-duration="4.0" data-track-index="0"></video>
+<div id="sG" class="sc clip" data-start="20.6" data-duration="4.0" data-track-index="1"><div class="in"><div class="vig"></div>
   <h1 id="tD1" class="big" style="top:250px;font-size:120px"><span>Ngày 1/90.</span></h1>
   <h1 id="tD2" class="big" style="top:420px;font-size:92px">Không bỏ về.</h1></div></div>
 
-<!-- I 23.4–27.4: giá squat, nuốt nước bọt -->
-<video id="vI" class="clip full" src="assets/clip/squat.mp4" muted playsinline data-start="23.4" data-duration="4.0" data-track-index="0"></video>
-<div id="sI" class="sc clip" data-start="23.4" data-duration="4.0" data-track-index="1"><div class="in"><div class="vig"></div>
+<!-- H 24.6–28.6: giá squat, nuốt nước bọt -->
+<video id="vH" class="clip full" src="assets/clip/squat.mp4" muted playsinline data-start="24.6" data-duration="4.0" data-track-index="0"></video>
+<div id="sH" class="sc clip" data-start="24.6" data-duration="4.0" data-track-index="1"><div class="in"><div class="vig"></div>
   <h1 id="tMai" class="big" style="top:250px;font-size:80px">Ngày mai: <span>cái máy to nhất phòng.</span></h1></div></div>
 
 <div id="fl1" class="flash clip" data-start="2.4" data-duration="0.2" data-track-index="3"></div>
-<div id="fl2" class="flash clip" data-start="6.4" data-duration="0.2" data-track-index="3"></div>
-<div id="fl3" class="flash clip" data-start="9.8" data-duration="0.2" data-track-index="3"></div>
-<div id="fl4" class="flash clip" data-start="11.2" data-duration="0.2" data-track-index="3"></div>
-<div id="fl5" class="flash clip" data-start="19.2" data-duration="0.2" data-track-index="3"></div>
-<div id="fl6" class="flash clip" data-start="23.4" data-duration="0.2" data-track-index="3"></div>
+<div id="fl2" class="flash clip" data-start="8.0" data-duration="0.2" data-track-index="3"></div>
+<div id="fl3" class="flash clip" data-start="10.4" data-duration="0.2" data-track-index="3"></div>
+<div id="fl5" class="flash clip" data-start="20.6" data-duration="0.2" data-track-index="3"></div>
+<div id="fl6" class="flash clip" data-start="24.6" data-duration="0.2" data-track-index="3"></div>
 </div>
 
 <script>
-// Tách chữ trong bong bóng suy nghĩ thành từng từ để hiện dần như đang thì thầm
-document.querySelectorAll(".think .b").forEach(b=>{
+// Tách chữ trong bong bóng thành từng từ để hiện dần theo giọng
+document.querySelectorAll(".think .b, .say").forEach(b=>{
   b.innerHTML=b.textContent.trim().split(/\s+/).map(w=>`<span class="w">${w}</span>`).join(" ");
 });
 const tl=gsap.timeline({paused:true});
@@ -105,12 +95,12 @@ const punch=(sel,t)=>tl.fromTo(sel,{scale:1.16},{scale:1,duration:.35,ease:"powe
 const kb=(sel,t,d,a=1.0,b=1.12)=>tl.fromTo(sel,{scale:a},{scale:b,duration:d,ease:"none"},t);
 const flash=(sel,t)=>tl.fromTo(sel,{opacity:.6},{opacity:0,duration:.18},t);
 const shake=(sel,t,n=8,x=12)=>tl.to(sel,{x:x,duration:.05,repeat:n,yoyo:true,ease:"none"},t).set(sel,{x:0},t+.05*(n+1));
-// bong bóng: hiện, chữ chạy từng từ, rồi tắt
-function think(sel,t0,t1){
+// bong bóng: hiện, chữ chạy từng từ trong khoảng giọng đọc [v0, v1], rồi tắt ở t1
+function bubble(sel,t0,v0,v1,t1){
   const ws=document.querySelectorAll(sel+" .w");
   tl.fromTo(sel,{opacity:0,y:30,scale:.85},{opacity:1,y:0,scale:1,duration:.25,ease:"back.out(2)"},t0);
-  const step=Math.min(.22,(t1-t0-.9)/ws.length);
-  ws.forEach((w,i)=>tl.fromTo(w,{opacity:0},{opacity:1,duration:.12},t0+.1+i*step));
+  const step=(v1-v0)/ws.length;
+  ws.forEach((w,i)=>tl.fromTo(w,{opacity:0},{opacity:1,duration:.12},v0+i*step));
   tl.to(sel,{opacity:0,duration:.18},t1-.18);
 }
 function pop(sel,t,from=2.2){tl.fromTo(sel,{opacity:0,scale:from},{opacity:1,scale:1,duration:.3,ease:"power4.out"},t);}
@@ -118,40 +108,33 @@ function pop(sel,t,from=2.2){tl.fromTo(sel,{opacity:0,scale:from},{opacity:1,sca
 // A
 kb("#vA",0,2.4,1.0,1.06);
 pop("#tPOV",.15,1.6);
-// B
-punch("#sB .in",2.4);flash("#fl1",2.4);kb("#sB img",2.4,4.0,1.0,1.1);
-think("#th1",2.6,4.45);think("#th2",4.5,6.4);
-// C
-punch("#sC .in",6.4);flash("#fl2",6.4);kb("#sC img.full",6.4,3.4,1.0,1.14);
-document.querySelectorAll("#sC .eye").forEach((e,i)=>{
-  const t=6.7+i*.2, fx=(parseFloat(e.style.left)<500?-420:420);
-  tl.fromTo(e,{opacity:0,x:fx,scale:.3,rotation:fx>0?40:-40},{opacity:1,x:0,scale:1,rotation:0,duration:.28,ease:"back.out(2.2)"},t);
-  tl.to(e,{y:-14,duration:.3,repeat:5,yoyo:true,ease:"sine.inOut"},t+.3);
-});
-shake("#sC .in",8.15,9,14);
-think("#th3",7.6,9.8);
-// D
-punch("#sD .in",9.8);flash("#fl3",9.8);kb("#sD img",9.8,1.4,1.0,1.08);
-// E: phóng vào mặt anh cơ bắp
-punch("#sE .in",11.2);flash("#fl4",11.2);
-tl.fromTo("#imE",{scale:1.0,transformOrigin:"62% 35%"},{scale:1.35,duration:2.2,ease:"power1.in"},11.2);
-think("#th4",11.4,13.4);
-// F: cắt cứng, không chớp, không zoom mạnh
-kb("#imF",13.4,5.8,1.0,1.1);
-pop("#tTT",13.55,1.8);
-tl.fromTo("#say",{opacity:0,scale:.4,transformOrigin:"20% 100%"},{opacity:1,scale:1,duration:.3,ease:"back.out(2.5)"},14.2);
-tl.to("#say",{opacity:0,duration:.2},16.2);
-tl.to("#tTT",{opacity:0,duration:.2},16.2);
-tl.to("#imF",{filter:"brightness(.55)",duration:.4},16.3);
-tl.fromTo("#note",{opacity:0,y:40},{opacity:1,y:0,duration:.4,ease:"power2.out"},16.5);
+// B (giọng: 2.6–5.1, 5.3–7.9)
+punch("#sB .in",2.4);flash("#fl1",2.4);kb("#sB img",2.4,5.6,1.0,1.12);
+bubble("#th1",2.5,2.6,4.9,5.2);bubble("#th2",5.2,5.3,7.7,8.0);
+// C (giọng: 8.2–10.0)
+punch("#sC .in",8.0);flash("#fl2",8.0);kb("#sC img",8.0,2.4,1.0,1.08);
+bubble("#th3",8.1,8.2,9.8,10.4);
+// D (giọng: 10.6–12.9), camera dí dần, rung khi ảnh tới gần
+flash("#fl3",10.4);kb("#vD",10.4,2.8,1.0,1.12);
+bubble("#th4",10.5,10.6,12.6,13.2);
+shake("#sD .in",12.3,9,10);shake("#vD",12.3,9,10);
+// E: cắt cứng, nhạc tắt (giọng anh cơ bắp: 13.6–15.9)
+kb("#vE",13.2,4.0,1.0,1.05);
+tl.fromTo("#say",{opacity:0,scale:.4,transformOrigin:"25% 100%"},{opacity:1,scale:1,duration:.3,ease:"back.out(2.5)"},13.45);
+document.querySelectorAll("#say .w").forEach((w,i,a)=>tl.fromTo(w,{opacity:0},{opacity:1,duration:.1},13.6+i*(2.2/a.length)));
+tl.to("#say",{opacity:0,duration:.2},16.9);
+// F
+punch("#sF .in",17.2);kb("#imF",17.2,3.4,1.0,1.08);
+tl.fromTo("#tF1",{opacity:0,y:40},{opacity:1,y:0,duration:.4,ease:"back.out(2)"},17.35);
+pop("#tF2",18.7,1.8);
+// G
+flash("#fl5",20.6);punch("#sG .in",20.6);
+pop("#tD1",20.8,2.6);shake("#sG .in",20.95,5,12);
+tl.fromTo("#tD2",{opacity:0,y:50},{opacity:1,y:0,duration:.35,ease:"back.out(2)"},21.7);
 // H
-flash("#fl5",19.2);punch("#sH .in",19.2);
-pop("#tD1",19.4,2.6);shake("#sH .in",19.55,5,12);
-tl.fromTo("#tD2",{opacity:0,y:50},{opacity:1,y:0,duration:.35,ease:"back.out(2)"},20.3);
-// I
-flash("#fl6",23.4);punch("#sI .in",23.4);
-tl.fromTo("#tMai",{opacity:0,y:-40},{opacity:1,y:0,duration:.4,ease:"back.out(2)"},23.9);
-shake("#sI .in",25.0,3,8);
+flash("#fl6",24.6);punch("#sH .in",24.6);
+tl.fromTo("#tMai",{opacity:0,y:-40},{opacity:1,y:0,duration:.4,ease:"back.out(2)"},25.0);
+shake("#sH .in",26.2,3,8);
 
 window.__timelines["main"]=tl;tl.seek(0);
 </script>

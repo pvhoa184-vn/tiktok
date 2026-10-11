@@ -1,4 +1,6 @@
-# Video #1: Ngày 1/90
+# Video #1: Ngày 1/90 (bản 2)
+
+Bản 2 (11/10): anh cơ bắp tới chỉnh tạ giúp thay cho đoạn "nhăn mặt tưởng cười", bỏ trích nghiên cứu, thêm giọng AI.
 
 Kịch bản: `/mnt/project-files/kich-ban/01-ngay-1/kich-ban.md` (chữ trên màn hình lấy nguyên văn từ `loi-va-chu.txt`, đã qua `soat_kich_ban.py`).
 
@@ -15,4 +17,6 @@ python3 am_thanh.py                                         # nhạc + SFX + gi�
 ## Âm thanh
 - Nhạc và SFX tự tổng hợp trong `am_thanh.py` (không bản quyền): nhạc hồi hộp tới 13,4 giây, rít đĩa, im lặng, nhạc vui vào nhẹ ở 16,4 giây, lên hẳn ở 19,2 giây, tiếng "ực" ở 25 giây.
 - Muốn dùng nhạc trend: đăng video lên TikTok, chọn nhạc trong app, chỉnh âm lượng gốc xuống.
-- Giọng thì thầm: thu 4 câu, lưu vào `giong/` đúng tên trong `GIONG` của `am_thanh.py`, chạy lại `python3 am_thanh.py`. Thiếu file nào thì câu đó chỉ có chữ.
+- Giọng AI (VieNeu v3 Turbo): `python tao_giong_ngay1.py <giọng mẫu 12 giây>` (venv có `vieneu` và `onnxruntime<1.24`). Bé Đậu nhân bản từ `assets/voice/mau-nghe-thu/everai - giong ban nhan ban.mp3` (cắt 12 giây đầu), anh cơ bắp là giọng có sẵn "Quốc Tuấn". File `.wav` bị gitignore, chạy lại script để tạo.
+- Thu giọng thật: ghi đè file trong `giong/` đúng tên trong `GIONG` của `am_thanh.py`, chạy lại `python3 am_thanh.py`.
+- Kiểm tra: Whisper medium trên đoạn 2,4–16,4 giây của bản trộn nghe đúng lời. Chạy trên cả video thì Whisper hay bịa lời ở đoạn chỉ có nhạc, nên cắt đoạn có giọng ra mà soát.

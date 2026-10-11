@@ -2,7 +2,7 @@
 
 Cách dùng (chạy trong thư mục videos/01-ngay-1):
     python am_thanh.py                 # tạo renders/nen.wav và renders/final.mp4
-Giọng thì thầm (không bắt buộc): đặt file vào giong/ đúng tên trong GIONG bên dưới.
+Giọng: tạo bằng tao_giong_ngay1.py (VieNeu, ra giong/*.raw.wav), hoặc thu thật rồi ghi đè đúng tên trong GIONG.
 Thiếu file nào thì bỏ qua câu đó, video vẫn chạy bằng chữ trong bong bóng.
 Cần: numpy, scipy, ffmpeg.
 """
@@ -16,20 +16,26 @@ from scipy.io import wavfile
 sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "scripts"))
 from tao_am_thanh import SR, clap, env, hat, hp, kick, lp, midi, nhac, note, sfx  # noqa: E402
 
-DAI = 27.4
-CAT_NHAC = 13.4      # nhạc tắt đột ngột
-NHAC_NHE = 16.4      # nhạc vào lại nhẹ
-NHAC_LEN = 19.2      # nhạc lên lại
-UC = 25.0            # tiếng "ực"
+DAI = 28.6
+CAT_NHAC = 13.2      # nhạc tắt đột ngột, lúc anh cơ bắp tới chỉnh tạ
+NHAC_NHE = 17.2      # nhạc vào lại nhẹ
+NHAC_LEN = 20.6      # nhạc lên lại
+UC = 26.2            # tiếng "ực"
 
-# Giọng thì thầm: (file trong giong/, giây bắt đầu). Khớp với bong bóng trong index.html.
+# Giọng: (file trong giong/, giây bắt đầu, kiểu). Khớp với bong bóng trong index.html.
+# Tạo bằng tao_giong_ngay1.py (VieNeu). Thu giọng thật thì ghi đè đúng tên file là xong.
 GIONG = [
-    ("1-muoi-phut.wav", 2.65),     # Mười phút rồi. Vẫn chưa dám vào.
-    ("2-gia-vo.wav", 4.55),        # Giả vờ nghe điện thoại. Không ai gọi cả.
-    ("3-thoi-xong.wav", 7.65),     # Thôi xong. Cả phòng đang nhìn mình.
-    ("4-anh-cuoi.wav", 11.45),     # Ảnh cười kìa. Chắc thấy mình cầm tạ ngược.
-    ("co-bap.wav", 14.25),         # "Mười một, mười hai." (giọng anh cơ bắp)
+    ("1-muoi-phut.raw.wav", 2.6, "be-dau"),   # Mười phút rồi. Vẫn chưa dám vào.
+    ("2-gia-vo.raw.wav", 5.3, "be-dau"),      # Giả vờ nghe điện thoại. Không ai gọi cả.
+    ("3-cam-vay.raw.wav", 8.2, "be-dau"),     # Cầm vậy là đúng chưa ta?
+    ("4-thoi-xong.raw.wav", 10.6, "be-dau"),  # Thôi xong. Ảnh đi về phía mình.
+    ("co-bap.raw.wav", 13.6, "co-bap"),       # Cầm thế này nè. Hồi đầu anh cũng cầm ngược.
 ]
+# Bé Đậu nói trong đầu: bớt trầm, hơi vang như tiếng nghĩ. Anh cơ bắp: tiếng phòng thật.
+LOC = {
+    "be-dau": "highpass=f=140,lowpass=f=7500,aecho=0.8:0.5:40:0.1,volume=4dB",
+    "co-bap": "highpass=f=80,volume=5dB",
+}
 
 
 def nhac_cang(sec, bpm=96):
@@ -119,16 +125,16 @@ def main():
 
     # 3. SFX
     s = sfx()
-    for t in (2.4, 6.4, 9.8, 11.2, 19.2, 23.4):
+    for t in (2.4, 8.0, 10.4, 20.6, 24.6):
         put(s["whoosh"], t - 0.15, 0.35)
-    for t in (2.6, 4.5, 7.6, 11.4):            # bong bóng suy nghĩ
+    for t in (2.5, 5.2, 8.1, 10.5):            # bong bóng suy nghĩ
         put(s["pop"], t, 0.25)
-    for i in range(7):                          # mỗi con mắt một tiếng whoosh
-        put(s["whoosh"][: int(SR * 0.3)], 6.68 + i * 0.2, 0.22)
-    put(s["boom"], 8.15, 0.35)
-    put(s["pop"], 14.2, 0.2)                    # bong bóng lời anh cơ bắp
-    put(s["boom"], 19.4, 0.5)
-    put(s["ding"], 20.3, 0.3)
+    for i in range(5):                          # bước chân anh cơ bắp, dồn dần
+        put(kick(0.3), 10.7 + i * 0.5, 0.25 + i * 0.08)
+    put(s["pop"], 13.45, 0.2)                   # bong bóng lời anh cơ bắp
+    put(s["ding"], 18.75, 0.25)                 # "Không biết thì cứ hỏi."
+    put(s["boom"], 20.8, 0.5)
+    put(s["ding"], 21.7, 0.3)
     put(uc(), UC, 0.9)
 
     bed = bed[:n]
@@ -139,17 +145,17 @@ def main():
     # 4. trộn giọng (nếu có) + nền + hình
     cmd = ["ffmpeg", "-loglevel", "error", "-y", "-i", "renders/hinh.mp4", "-i", "renders/nen.wav"]
     parts, k = [], 0
-    for f, t in GIONG:
+    for f, t, kieu in GIONG:
         p = Path("giong") / f
         if p.exists():
             cmd += ["-i", str(p)]
             ms = int(t * 1000)
-            parts.append(f"[{k + 2}]adelay={ms}|{ms},volume=2dB[g{k}]")
+            parts.append(f"[{k + 2}]aresample=44100,aformat=channel_layouts=mono,{LOC[kieu]},adelay={ms}|{ms}[g{k}]")
             k += 1
     if k:
-        mix = ";".join(parts) + ";" + "".join(f"[g{i}]" for i in range(k)) + f"amix=inputs={k}:normalize=0[voc];"
-        mix += "[1][voc]sidechaincompress=threshold=0.03:ratio=5:attack=15:release=300[duck];"
-        mix += "[duck][voc]amix=inputs=2:normalize=0,loudnorm=I=-14:TP=-1.5:LRA=9[out]"
+        mix = ";".join(parts) + ";" + "".join(f"[g{i}]" for i in range(k)) + f"amix=inputs={k}:normalize=0,apad=whole_dur={DAI},asplit=2[voc][voc2];"
+        mix += "[1][voc]sidechaincompress=threshold=0.02:ratio=9:attack=15:release=300[duck];"
+        mix += "[duck][voc2]amix=inputs=2:normalize=0,loudnorm=I=-14:TP=-1.5:LRA=9[out]"
     else:
         mix = "[1]loudnorm=I=-14:TP=-1.5:LRA=9[out]"
     cmd += ["-filter_complex", mix, "-map", "0:v", "-map", "[out]", "-c:v", "libx264", "-crf", "20",
