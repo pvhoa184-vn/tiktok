@@ -7,7 +7,7 @@ Trả lời người dùng bằng **tiếng Việt**. Kế hoạch đầy đủ 
 - **Công cụ dựng:** HyperFrames (HTML → MP4), khổ dọc 1080×1920, 30fps. Mẫu dựng sẵn ở `videos/_starter/` đã có GSAP và font Be Vietnam Pro chép sẵn trong thư mục. **Không tải từ CDN**, vì môi trường cloud chặn jsdelivr và Hugging Face.
 - **Giọng đọc:** VieNeu-TTS (`pip install vieneu`, bản v3 Turbo, mã nguồn Apache 2.0), nhân bản giọng người dùng từ 3–8 giây thu âm. TTS tích hợp của HyperFrames (Kokoro) không có tiếng Việt.
 - **Phụ đề:** dùng `hyperframes init <ten> --audio giong.mp3 --language vi --model small --resolution portrait` (Whisper đa ngôn ngữ, không dùng bản `.en`).
-- **Hình ảnh mỗi cảnh có 3 lớp:** nền là B-roll phòng gym (tự quay hoặc lấy từ Pexels/Pixabay), minh hoạ là **nhân vật đại diện "người mới"** vẽ bằng SVG cùng icon động, trên cùng là chữ và phụ đề karaoke.
+- **Hình ảnh mỗi cảnh có 3 lớp:** nền là B-roll phòng gym (tự quay hoặc lấy từ Pexels/Pixabay), minh hoạ là **nhân vật Bé Đậu** (PNG 3D) cùng icon 3D Fluent Emoji, trên cùng là chữ và phụ đề karaoke.
 - **Nhận diện:** nền `#0b0b0f`, chữ trắng, một màu nhấn xanh chanh `#c6ff3d`. Tránh 250px dưới cùng và cột 150px bên phải (nút của TikTok).
 - **Số liệu:** chỉ nói "khoảng", nói rõ nguồn, không đưa lời khuyên y tế. Bật nhãn AI trên TikTok khi dùng giọng AI.
 
@@ -15,7 +15,9 @@ Trả lời người dùng bằng **tiếng Việt**. Kế hoạch đầy đủ 
 - `KE_HOACH_KENH.md`: kế hoạch, bản đồ chủ đề, kịch bản video #1
 - `videos/_starter/`: mẫu HyperFrames; sao chép thành `videos/<so>-<ten>/` cho mỗi video
 - `assets/voice/`: file giọng mẫu của người dùng (khi có)
-- `assets/nhan-vat/`: SVG nhân vật đại diện
+- `assets/nhan-vat/`: Bé Đậu PNG nền trong suốt (`be-dau-ngai`, `be-dau-nup-cua`, `be-dau-tai-nghe`, `be-dau-nang-ta`, `be-dau-tu-tin`, `be-dau-chao`); ảnh gốc ChatGPT ở `goc/`; `nhap-svg/` là bản nháp cũ, không dùng
+- `assets/icons-3d/`: icon Fluent Emoji 3D (MIT)
+- `scripts/tach_nen.py`: cắt bảng nhân vật và tách nền trắng thành PNG trong suốt
 - `scripts/tao_giong.py`: tạo giọng đọc bằng VieNeu-TTS
 
 ## Tiến độ (cập nhật cuối mỗi session)
@@ -25,8 +27,8 @@ Trả lời người dùng bằng **tiếng Việt**. Kế hoạch đầy đủ 
 - [x] Script tạo giọng `scripts/tao_giong.py` (VieNeu 3.8.3, API: `Vieneu(mode="v3turbo").infer(text, ref_audio=...)`, 48kHz, có watermark âm thanh mặc định). **Môi trường cloud không chạy được** vì mô hình chỉ tải từ Hugging Face (bị chặn), nên phải chạy trên máy local.
 - [x] Lời đọc video #1: `videos/01-ngai-lan-dau/loi_doc.txt`
 - [x] Vẽ 3 phương án nhân vật (SVG, mỗi nhân vật có bản "ngại" và "tự tin") trong `assets/nhan-vat/`, bảng so sánh `bang-so-sanh.png`: A. Bé Đậu, B. Cậu Hoodie, C. Tạ Tí
-- [x] Người dùng chê nét vẽ SVG tay là xấu. Đã chuyển sang **icon 3D Fluent Emoji của Microsoft** (MIT) trong `assets/icons-3d/`, tải từ `raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/<Tên>/3D/<ten>_3d.png` (đi được qua proxy). Demo: `videos/01-ngai-lan-dau/demo-icon-3d.mp4`
-- [ ] Nhân vật đại diện: người dùng tự tạo bằng AI tạo ảnh (Gemini/ChatGPT) theo prompt Claude đưa, phong cách 3D khớp với Fluent Emoji, nền trong suốt, rồi đưa PNG vào `assets/nhan-vat/`. Các SVG tự vẽ trong đó chỉ là bản nháp, không dùng.
+- [x] Người dùng chê nét vẽ SVG tay là xấu. Đã chuyển sang **icon 3D Fluent Emoji của Microsoft** (MIT) trong `assets/icons-3d/`, tải từ `raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/<Tên>/3D/<ten>_3d.png` (đi được qua proxy). 
+- [x] **Chốt nhân vật Bé Đậu**: người dùng tạo bằng ChatGPT (hạt đậu kem 3D, băng đô xanh chanh), đã tách thành 6 PNG trong suốt. Demo 12 giây có Bé Đậu: `videos/01-ngai-lan-dau/demo-be-dau.mp4`. Cần tư thế mới thì người dùng tạo thêm trên ChatGPT với ảnh gốc làm tham chiếu ("same character, ..., plain white background"), rồi chạy `tach_nen.py`.
 - [ ] Chạy `python scripts/tao_giong.py --ref assets/voice/mau.m4a --file videos/01-ngai-lan-dau/loi_doc.txt --out videos/01-ngai-lan-dau/giong.wav` trên máy local
 - [ ] Dựng video #1 (kịch bản ở mục 6 của `KE_HOACH_KENH.md`)
 - [ ] Chưa chốt: cảnh nền tự quay hay lấy từ Pexels
