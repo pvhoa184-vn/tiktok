@@ -1,0 +1,4 @@
+node_modules/
+renders/
+*.wav
+.DS_Store
