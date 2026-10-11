@@ -1,7 +1,7 @@
 # Kế hoạch kênh TikTok: Gym và tâm lý người mới
 
-> Ngách: **tâm lý người mới tập gym**, gồm sự ngại ngùng, sợ bị đánh giá, không biết bắt đầu từ đâu và hay bỏ cuộc.
-> Lời hứa của kênh: *"Xem xong bạn bớt sợ và dám bước vào phòng gym."*
+> Ngách: **tâm lý người mới tập gym**, theo suốt 90 ngày đầu, từ trước khi đi tập cho đến lúc muốn bỏ cuộc.
+> Định vị: *"Đồng hành tâm lý 90 ngày đầu tập gym: từ sợ bước vào đến không muốn bỏ."*
 > Công cụ dựng: **Claude Code + HyperFrames** (viết video bằng HTML, render ra MP4 dọc 1080×1920).
 
 ---
@@ -91,7 +91,64 @@ Câu mở đầu phải nằm trong **1 đến 2 giây đầu**, vừa hiện ch
 
 ---
 
-## 5. Kịch bản chi tiết video #1
+## 5. Bản đồ chủ đề theo hành trình 90 ngày
+
+Nỗi sợ buổi đầu mới chỉ là **ngày 0**. Người mới còn đi qua nhiều giai đoạn tâm lý khác. Khi chia theo giai đoạn, kênh có **khoảng 95 chủ đề gốc**, tương đương hơn 1 năm đăng 4 video mỗi tuần.
+
+> 💡 Giai đoạn **tháng 1–3** có giá trị nhất. Một số nghiên cứu thập niên 1980 về việc duy trì tập luyện (Dishman) cho thấy **khoảng một nửa** người tham gia chương trình tập bỏ cuộc trong 6 tháng đầu. Khi nói trong video, nên dùng "khoảng một nửa" và nói rõ đây là nghiên cứu cũ.
+
+### 5.1 Trước khi đi (~15 video)
+- "Bạn đang đợi giảm cân rồi mới đi gym? Đó là cái bẫy."
+- "Đi gym một mình hay rủ bạn? Mỗi cách có cái lợi riêng."
+- "Cách chọn phòng gym cho người hay ngại: đừng chỉ nhìn giá."
+- "Bạn không cần 'đủ đẹp' để được bước vào phòng gym."
+- "Tối nay hứa mai đi tập, sáng mai lại thôi? Não bạn đang làm điều này."
+
+### 5.2 Tuần đầu (~20 video)
+- "Đau cơ hôm sau là bình thường, đừng vì nó mà bỏ."
+- "PT mời mua gói tập ngay buổi đầu? Đây là cách từ chối lịch sự."
+- "Ngại phòng thay đồ? Mấy mẹo nhỏ giúp bạn đỡ ngại."
+- "Quên mất bài tập giữa chừng? Đây là cách giữ bình tĩnh."
+- "Buổi thứ 2 còn khó hơn buổi đầu, và lý do là thế này."
+
+### 5.3 Tháng 1–3: giai đoạn dễ bỏ cuộc nhất (~25 video)
+- "Tập 3 tuần mà cân không giảm? Đừng tin cái cân lúc này."
+- "Lỡ nghỉ 1 buổi rồi bỏ luôn? Bẫy 'được ăn cả, ngã về không'."
+- "Hết động lực là chuyện bình thường. Thứ giúp bạn đi tiếp là thói quen."
+- "Quy tắc 2 phút: chỉ cần thay đồ là tính một buổi."
+- "Thay đổi thật sự mất bao lâu? Một con số thật, không quảng cáo."
+- "Tuần thứ 6, ai cũng muốn bỏ. Đây là lý do."
+
+### 5.4 Hình ảnh cơ thể và so sánh (~15 video)
+- "Ảnh trước/sau trên mạng: ánh sáng, góc chụp và tư thế đã đánh lừa bạn thế nào."
+- "Con gái tập tạ có bị to như con trai không?"
+- "Tập mãi vẫn gầy? Cảm giác của người 'khó tăng cân'."
+- "Đừng so tháng đầu của bạn với năm thứ 5 của người khác."
+- "Tập trước gương: nên soi động tác thay vì soi khuyết điểm."
+
+### 5.5 Áp lực xã hội (~10 video)
+- "Bạn bè chê 'đi gym làm gì cho mệt'? Đây là cách trả lời."
+- "Gia đình bảo 'con gái tập gym làm gì'."
+- "Đi tiệc mà vẫn giữ được mục tiêu, không phải từ chối mọi người."
+
+### 5.6 Quay lại sau khi bỏ (~10 video)
+- "Quay lại phòng gym sau 3 tháng nghỉ: không ai nhớ bạn đâu, và đó là tin tốt."
+- "Nghỉ tập có mất hết thành quả không? Cơ bắp có 'trí nhớ'."
+- "Bắt đầu lại không có nghĩa là thất bại."
+
+### 5.7 Hai cách nhân thêm nội dung
+- **Theo đối tượng:** cùng một chủ đề có thể làm riêng cho nữ, người thừa cân, người trên 30 tuổi, người hướng nội hoặc sinh viên ít tiền.
+- **Theo định dạng:** trả lời bình luận, POV, series nhiều tập, chuyện thật của người xem.
+
+### 5.8 Khi nào mở rộng kênh
+- **30 đến 50 video đầu:** chỉ bám chủ đề tâm lý người mới để TikTok hiểu kênh bạn nói về gì.
+- **Sau đó, xem số liệu:** chủ đề nào được **lưu và chia sẻ** nhiều, người xem **hỏi gì** trong bình luận.
+- **Nên mở rộng sang:** kiến thức cơ bản cho người mới (bài tập, ăn uống), nhưng vẫn nói qua góc nhìn tâm lý. Ví dụ: "Vì sao người mới nên tập toàn thân: không chỉ vì cơ bắp mà vì dễ duy trì hơn."
+- **Không nên mở rộng sang:** nội dung cho người tập lâu năm, khoe thân hình, review thực phẩm bổ sung. Những thứ này làm loãng kênh và phải cạnh tranh với PT có body đẹp.
+
+---
+
+## 6. Kịch bản chi tiết video #1
 
 **Tiêu đề:** *"Bạn ngại lần đầu đến phòng gym? Xem cái này trước."*
 **Độ dài:** khoảng 40 giây. **Phong cách:** nền tối, chữ trắng, điểm nhấn xanh chanh `#c6ff3d`, xen B-roll phòng gym nếu có.
@@ -113,7 +170,7 @@ Câu mở đầu phải nằm trong **1 đến 2 giây đầu**, vừa hiện ch
 
 ---
 
-## 6. Quy trình sản xuất mỗi video với Claude Code
+## 7. Quy trình sản xuất mỗi video với Claude Code
 
 ```
 1. Chọn ý tưởng → nhờ Claude viết kịch bản (bảng thời gian | hình | lời)
@@ -137,14 +194,14 @@ Các skill nên dùng: `/faceless-explainer` (video giải thích không lộ m�
 
 ---
 
-## 7. Nhận diện và nguyên tắc chung
+## 8. Nhận diện và nguyên tắc chung
 
 - **Màu:** nền đen `#0b0b0f`, chữ trắng, một màu nhấn duy nhất là xanh chanh `#c6ff3d`. Giữ cố định để người xem nhận ra kênh.
 - **Font:** Be Vietnam Pro, đậm 900 cho câu mở đầu, 600 cho nội dung.
 - **Nhịp:** cứ 2 đến 3 giây đổi hình hoặc hiện chữ mới. Độ dài 30 đến 60 giây.
 - **Vùng an toàn:** tránh 250px dưới cùng và cột 150px bên phải, vì nút của TikTok nằm ở đó.
 - **Giọng điệu:** như người anh hoặc chị đi trước, ấm áp, không phán xét, **không chê cơ thể**.
-- **Tần suất:** 3 đến 5 video mỗi tuần. Tuần đầu đăng ý tưởng #1, #7, #14 để thử phản ứng của 3 trụ nội dung.
+- **Tần suất:** 3 đến 5 video mỗi tuần. Tuần đầu đăng ý tưởng #1, #7, #14 (mục 4) để thử phản ứng của 3 trụ nội dung.
 - **Ghi nhãn AI:** nếu dùng giọng AI, bật nhãn "nội dung do AI tạo" của TikTok để tránh bị giảm phân phối.
 - **Không đưa lời khuyên y tế.** Với các chủ đề lo âu nặng, nên nói thêm "nếu bạn thấy quá sức, hãy tìm chuyên gia".
 
@@ -162,3 +219,4 @@ Các skill nên dùng: `/faceless-explainer` (video giải thích không lộ m�
 - Nghiên cứu lo âu phòng gym (IJCMPH): https://www.ijcmph.com/index.php/ijcmph/article/download/15661/9523/82527
 - Mẹo vượt nỗi sợ phòng gym (Experience Life): https://experiencelife.lifetime.life/article/8-tips-to-overcome-fear-of-going-to-the-gym/
 - Hiệu ứng ánh đèn sân khấu: https://www.reachlink.com/advice/general/nobody-is-watching-you-nearly-as-closely-as-you-think/
+- Tỉ lệ bỏ tập khoảng 50% trong 6 tháng (tổng quan, PMC): https://pmc.ncbi.nlm.nih.gov/articles/PMC3181282/
