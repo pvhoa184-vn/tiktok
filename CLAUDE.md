@@ -20,6 +20,7 @@ Trả lời người dùng bằng **tiếng Việt**. Kế hoạch đầy đủ 
 - `assets/icons-3d/`: icon Fluent Emoji 3D (MIT)
 - `scripts/tach_nen.py`: cắt bảng nhân vật và tách nền trắng thành PNG trong suốt
 - `scripts/tao_giong.py`: tạo giọng đọc bằng VieNeu-TTS
+- `scripts/tao_am_thanh.py`: tự tổng hợp nhạc nền (`assets/nhac/`) và SFX pop/ding/whoosh/boom/tick (`assets/sfx/`), không bản quyền
 
 ## Tiến độ (cập nhật cuối mỗi session)
 - [x] Nghiên cứu ngách, đánh giá HyperFrames, render thử
@@ -32,6 +33,13 @@ Trả lời người dùng bằng **tiếng Việt**. Kế hoạch đầy đủ 
 - [x] **Chốt nhân vật Bé Đậu**: người dùng tạo bằng ChatGPT (hạt đậu kem 3D, băng đô xanh chanh), đã tách thành 6 PNG trong suốt.  Cần tư thế mới thì người dùng tạo thêm trên ChatGPT với ảnh gốc làm tham chiếu ("same character, ..., plain white background"), rồi chạy `tach_nen.py`.
 - [x] Đã thử 2 giọng nam "Thiện Minh" và "Hải Đăng" (`assets/voice/mau-nghe-thu/v3 - *.mp3`), Whisper `small --language vi` nhận đúng lời (chỉ nghe nhầm "gym" thành "Jim", cần sửa tay trong phụ đề). Lý do chọn giọng nam: khán giả gym Việt có vẻ nghiêng về nam, và nỗi sợ của nam ít được nói tới.
 - [x] **EverAI**: người dùng nhân bản giọng mình trên everai.vn (lĩnh vực "Podcast"), đọc đoạn thử 28 giây (`assets/voice/mau-nghe-thu/everai - giong ban nhan ban.mp3`). Whisper medium nhận đúng 100% lời, kể cả "gym, rep, form, squat", khoảng nghỉ tự nhiên 0,3–1,2 giây. Demo 28 giây có giọng và phụ đề: `videos/01-ngai-lan-dau/demo-giong-everai.mp4`. Chờ người dùng chốt.
+- [x] Người dùng thấy giọng nhân bản của mình "rụt rè" và không đọc hào hứng được, nên chọn **hướng 2: giữ giọng, để phần dựng tạo năng lượng**. Demo `videos/01-ngai-lan-dau/demo-nang-luong.mp4` (24 giây), mã nguồn ở `demo-nang-luong-src/` (index.html + mix.sh). Công thức:
+  - Giọng tăng tốc 1,12 lần, cắt khoảng lặng trên 0,3 giây, thêm EQ và nén (lệnh ffmpeg trong lịch sử, đầu ra `everai - da xu ly`).
+  - Cảnh 1–4 giây, mỗi cảnh vào bằng punch-zoom (scale 1.18→1) + chớp trắng. **Mỗi lần chớp là một div `.flash.clip` riêng**, vì dùng chung một `#flash` với fromTo thì GSAP áp trạng thái đầu quá sớm, làm cảnh đầu bị xám.
+  - Video nền zoom chậm (Ken Burns), chữ to bật vào kèm rung màn hình, phụ đề karaoke tối đa 4 từ, chữ đang đọc phóng 1,3 lần màu xanh chanh, viền đen.
+  - Âm thanh: trộn bằng ffmpeg sau khi render. Nhạc -17 dB, sidechain ducking theo giọng; SFX theo mốc thời gian; loudnorm -14 LUFS.
+  - **Đừng đặt boom/ding trùng chữ đang đọc**: chúng che mất chữ "đủ" (Whisper nghe thành "đúng"). Đặt ngay sau chữ.
+  - Kiểm tra cuối: Whisper medium trên âm thanh đã trộn, phải nghe đúng lời.
 - [ ] (cũ) Người dùng chọn giọng có sẵn, rồi chạy `python scripts/tao_giong.py --voice "<Tên>" --file videos/01-ngai-lan-dau/loi_doc.txt --out videos/01-ngai-lan-dau/giong.wav` trên máy local
 - [ ] Dựng video #1 (kịch bản ở mục 6 của `KE_HOACH_KENH.md`)
 - [x] Cảnh nền: lấy từ Pexels. Tải không cần API key qua `https://www.pexels.com/download/video/<ID>/` (chuyển hướng sang videos.pexels.com); tìm ID bằng WebSearch giới hạn ở pexels.com. Trang tìm kiếm Pexels bị Cloudflare chặn (403). Video phải mã hoá lại với `-g 30 -keyint_min 30`, nếu không HyperFrames báo lỗi keyframe thưa và hình bị đứng. Demo đủ 3 lớp: `videos/01-ngai-lan-dau/demo-co-nen.mp4`

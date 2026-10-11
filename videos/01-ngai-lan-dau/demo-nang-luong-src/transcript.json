@@ -1,0 +1,506 @@
+[
+  {
+    "text": "Bạn",
+    "start": 0.06,
+    "end": 0.18,
+    "id": "w0"
+  },
+  {
+    "text": "nghĩ",
+    "start": 0.18,
+    "end": 0.42,
+    "id": "w1"
+  },
+  {
+    "text": "cả",
+    "start": 0.42,
+    "end": 0.54,
+    "id": "w2"
+  },
+  {
+    "text": "phòng",
+    "start": 0.54,
+    "end": 0.84,
+    "id": "w3"
+  },
+  {
+    "text": "gym",
+    "start": 0.84,
+    "end": 1.02,
+    "id": "w4"
+  },
+  {
+    "text": "đang",
+    "start": 1.02,
+    "end": 1.26,
+    "id": "w5"
+  },
+  {
+    "text": "nhìn",
+    "start": 1.26,
+    "end": 1.5,
+    "id": "w6"
+  },
+  {
+    "text": "bạn.",
+    "start": 1.5,
+    "end": 1.68,
+    "id": "w7"
+  },
+  {
+    "text": "Lần",
+    "start": 2.01,
+    "end": 2.2,
+    "id": "w8"
+  },
+  {
+    "text": "đầu",
+    "start": 2.2,
+    "end": 2.49,
+    "id": "w9"
+  },
+  {
+    "text": "đi",
+    "start": 2.49,
+    "end": 2.68,
+    "id": "w10"
+  },
+  {
+    "text": "tập,",
+    "start": 2.68,
+    "end": 3.15,
+    "id": "w11"
+  },
+  {
+    "text": "ai",
+    "start": 3.15,
+    "end": 3.31,
+    "id": "w12"
+  },
+  {
+    "text": "cũng",
+    "start": 3.31,
+    "end": 3.55,
+    "id": "w13"
+  },
+  {
+    "text": "có",
+    "start": 3.55,
+    "end": 3.785,
+    "id": "w14"
+  },
+  {
+    "text": "cảm",
+    "start": 3.785,
+    "end": 4.02,
+    "id": "w15"
+  },
+  {
+    "text": "giác",
+    "start": 4.02,
+    "end": 4.33,
+    "id": "w16"
+  },
+  {
+    "text": "đó.",
+    "start": 4.33,
+    "end": 4.52,
+    "id": "w17"
+  },
+  {
+    "text": "Mình",
+    "start": 4.52,
+    "end": 4.74,
+    "id": "w18"
+  },
+  {
+    "text": "cũng",
+    "start": 4.74,
+    "end": 4.97,
+    "id": "w19"
+  },
+  {
+    "text": "từng",
+    "start": 4.97,
+    "end": 5.19,
+    "id": "w20"
+  },
+  {
+    "text": "đứng",
+    "start": 5.19,
+    "end": 5.41,
+    "id": "w21"
+  },
+  {
+    "text": "ngoài",
+    "start": 5.41,
+    "end": 5.69,
+    "id": "w22"
+  },
+  {
+    "text": "cửa",
+    "start": 5.69,
+    "end": 5.95,
+    "id": "w23"
+  },
+  {
+    "text": "15",
+    "start": 5.95,
+    "end": 6.16,
+    "id": "w24"
+  },
+  {
+    "text": "phút,",
+    "start": 6.42,
+    "end": 6.86,
+    "id": "w25"
+  },
+  {
+    "text": "rồi",
+    "start": 6.86,
+    "end": 7.2,
+    "id": "w26"
+  },
+  {
+    "text": "lặn",
+    "start": 7.2,
+    "end": 7.53,
+    "id": "w27"
+  },
+  {
+    "text": "lẽ",
+    "start": 7.61,
+    "end": 7.75,
+    "id": "w28"
+  },
+  {
+    "text": "đi",
+    "start": 7.75,
+    "end": 7.97,
+    "id": "w29"
+  },
+  {
+    "text": "về.",
+    "start": 7.97,
+    "end": 8.24,
+    "id": "w30"
+  },
+  {
+    "text": "Nhưng",
+    "start": 8.39,
+    "end": 8.62,
+    "id": "w31"
+  },
+  {
+    "text": "thực",
+    "start": 8.62,
+    "end": 8.93,
+    "id": "w32"
+  },
+  {
+    "text": "tế,",
+    "start": 8.93,
+    "end": 9.22,
+    "id": "w33"
+  },
+  {
+    "text": "người",
+    "start": 9.22,
+    "end": 9.61,
+    "id": "w34"
+  },
+  {
+    "text": "ta",
+    "start": 9.61,
+    "end": 9.76,
+    "id": "w35"
+  },
+  {
+    "text": "để",
+    "start": 9.76,
+    "end": 9.88,
+    "id": "w36"
+  },
+  {
+    "text": "ý",
+    "start": 9.88,
+    "end": 10.11,
+    "id": "w37"
+  },
+  {
+    "text": "bạn",
+    "start": 10.11,
+    "end": 10.34,
+    "id": "w38"
+  },
+  {
+    "text": "chỉ",
+    "start": 10.34,
+    "end": 10.44,
+    "id": "w39"
+  },
+  {
+    "text": "khoảng",
+    "start": 10.44,
+    "end": 10.9,
+    "id": "w40"
+  },
+  {
+    "text": "25%",
+    "start": 10.9,
+    "end": 11.43,
+    "id": "w41"
+  },
+  {
+    "text": "thôi.",
+    "start": 11.43,
+    "end": 11.84,
+    "id": "w42"
+  },
+  {
+    "text": "Ai",
+    "start": 11.84,
+    "end": 12.01,
+    "id": "w43"
+  },
+  {
+    "text": "cũng",
+    "start": 12.01,
+    "end": 12.26,
+    "id": "w44"
+  },
+  {
+    "text": "đang",
+    "start": 12.26,
+    "end": 12.54,
+    "id": "w45"
+  },
+  {
+    "text": "bận",
+    "start": 12.54,
+    "end": 12.75,
+    "id": "w46"
+  },
+  {
+    "text": "đếm",
+    "start": 12.75,
+    "end": 12.96,
+    "id": "w47"
+  },
+  {
+    "text": "rep,",
+    "start": 12.96,
+    "end": 13.36,
+    "id": "w48"
+  },
+  {
+    "text": "chỉnh",
+    "start": 13.36,
+    "end": 13.69,
+    "id": "w49"
+  },
+  {
+    "text": "phong",
+    "start": 13.82,
+    "end": 14.02,
+    "id": "w50"
+  },
+  {
+    "text": "hay",
+    "start": 14.02,
+    "end": 14.22,
+    "id": "w51"
+  },
+  {
+    "text": "nghe",
+    "start": 14.22,
+    "end": 14.48,
+    "id": "w52"
+  },
+  {
+    "text": "nhạc",
+    "start": 14.48,
+    "end": 14.73,
+    "id": "w53"
+  },
+  {
+    "text": "của",
+    "start": 14.73,
+    "end": 14.93,
+    "id": "w54"
+  },
+  {
+    "text": "riêng",
+    "start": 14.93,
+    "end": 15.25,
+    "id": "w55"
+  },
+  {
+    "text": "mình.",
+    "start": 15.25,
+    "end": 15.84,
+    "id": "w56"
+  },
+  {
+    "text": "Hôm",
+    "start": 15.91,
+    "end": 16.04,
+    "id": "w57"
+  },
+  {
+    "text": "nay,",
+    "start": 16.04,
+    "end": 16.37,
+    "id": "w58"
+  },
+  {
+    "text": "bạn",
+    "start": 16.37,
+    "end": 16.57,
+    "id": "w59"
+  },
+  {
+    "text": "chỉ",
+    "start": 16.57,
+    "end": 16.77,
+    "id": "w60"
+  },
+  {
+    "text": "cần",
+    "start": 16.77,
+    "end": 16.97,
+    "id": "w61"
+  },
+  {
+    "text": "làm",
+    "start": 16.97,
+    "end": 17.17,
+    "id": "w62"
+  },
+  {
+    "text": "3",
+    "start": 17.17,
+    "end": 17.37,
+    "id": "w63"
+  },
+  {
+    "text": "hiệp",
+    "start": 17.37,
+    "end": 17.62,
+    "id": "w64"
+  },
+  {
+    "text": "squat",
+    "start": 17.94,
+    "end": 17.96,
+    "id": "w65"
+  },
+  {
+    "text": "mỗi",
+    "start": 17.96,
+    "end": 18.16,
+    "id": "w66"
+  },
+  {
+    "text": "hiệp",
+    "start": 18.16,
+    "end": 18.38,
+    "id": "w67"
+  },
+  {
+    "text": "10",
+    "start": 18.41,
+    "end": 18.63,
+    "id": "w68"
+  },
+  {
+    "text": "cái.",
+    "start": 18.93,
+    "end": 19.37,
+    "id": "w69"
+  },
+  {
+    "text": "Thế",
+    "start": 19.57,
+    "end": 19.65,
+    "id": "w70"
+  },
+  {
+    "text": "là",
+    "start": 19.65,
+    "end": 19.82,
+    "id": "w71"
+  },
+  {
+    "text": "đủ",
+    "start": 19.82,
+    "end": 19.98,
+    "id": "w72"
+  },
+  {
+    "text": "rồi.",
+    "start": 19.98,
+    "end": 20.52,
+    "id": "w73"
+  },
+  {
+    "text": "Người",
+    "start": 20.65,
+    "end": 20.85,
+    "id": "w74"
+  },
+  {
+    "text": "mạnh",
+    "start": 20.85,
+    "end": 21.11,
+    "id": "w75"
+  },
+  {
+    "text": "nhất",
+    "start": 21.11,
+    "end": 21.38,
+    "id": "w76"
+  },
+  {
+    "text": "phòng",
+    "start": 21.38,
+    "end": 21.71,
+    "id": "w77"
+  },
+  {
+    "text": "cũng",
+    "start": 21.71,
+    "end": 21.97,
+    "id": "w78"
+  },
+  {
+    "text": "từng",
+    "start": 21.97,
+    "end": 22.17,
+    "id": "w79"
+  },
+  {
+    "text": "có",
+    "start": 22.17,
+    "end": 22.5,
+    "id": "w80"
+  },
+  {
+    "text": "buổi",
+    "start": 22.5,
+    "end": 22.63,
+    "id": "w81"
+  },
+  {
+    "text": "đầu",
+    "start": 22.63,
+    "end": 22.83,
+    "id": "w82"
+  },
+  {
+    "text": "tiên.",
+    "start": 22.83,
+    "end": 23.2,
+    "id": "w83"
+  }
+]
