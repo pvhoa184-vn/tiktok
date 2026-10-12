@@ -32,57 +32,67 @@ html,body{width:1080px;height:1920px;overflow:hidden;background:#0b0b0f}
 .say{position:absolute;background:#c6ff3d;color:#0b0b0f;border-radius:44px;padding:26px 38px;font-size:56px;font-weight:900;line-height:1.2;
   box-shadow:0 12px 30px rgba(0,0,0,.4);text-align:center}
 .say:after{content:"";position:absolute;left:180px;bottom:-30px;border:18px solid transparent;border-top:24px solid #c6ff3d;border-bottom:0}
+.say.bd{background:#fff;color:#1a1a22}
+.say.bd:after{left:auto;right:150px;border-top-color:#fff}
+.small{position:absolute;left:70px;right:170px;text-align:center;font-weight:600;font-size:38px;color:#c6ff3d;
+  text-shadow:0 4px 0 #000,0 0 20px rgba(0,0,0,.9)}
 .say .w{display:inline-block;margin:0 .1em;opacity:0}
 </style>
 </head>
 <body>
-<div id="root" data-composition-id="main" data-start="0" data-duration="28.6" data-width="1080" data-height="1920">
+<div id="root" data-composition-id="main" data-start="0" data-duration="32.4" data-width="1080" data-height="1920">
 
-<!-- A 0–2.4: nép sau cửa (clip Kling) -->
-<video id="vA" class="clip full" src="assets/clip/cua.mp4" muted playsinline data-start="0" data-duration="2.4" data-track-index="0"></video>
-<div id="sA" class="sc clip" data-start="0" data-duration="2.4" data-track-index="1"><div class="in"><div class="vig"></div>
-  <h1 id="tPOV" class="big" style="top:250px;font-size:92px">POV: lần đầu bước vào <span>phòng gym</span></h1></div></div>
+<!-- 1. 0–5.3: đứng ngoài cửa, nhấc chân rồi rụt lại (clip Kling) -->
+<video id="v1" class="clip full" src="assets/clip-v3/nhac-chan.mp4" muted playsinline data-start="0" data-duration="5.3" data-track-index="0"></video>
+<div id="s1" class="sc clip" data-start="0" data-duration="5.3" data-track-index="1"><div class="in"><div class="vig"></div>
+  <div id="tSeri" class="small" style="top:236px">100 ngày thay đổi bản thân của Bé Đậu</div>
+  <h1 id="tNgay" class="big" style="top:310px;font-size:96px">Ngày 1: lần đầu bước vào <span>phòng gym</span></h1>
+  <div id="th1" class="think" style="top:250px"><div class="b">Rồi. Đếm tới ba là vào. Một. Hai…</div></div></div></div>
 
-<!-- B 2.4–8.0: giả vờ nghe điện thoại -->
-<div id="sB" class="sc clip" data-start="2.4" data-duration="5.6" data-track-index="0"><div class="in"><img class="full" src="assets/canh/dien-thoai.jpg"><div class="vig"></div>
-  <div id="th1" class="think" style="top:230px"><div class="b">Mười phút rồi. Vẫn chưa dám vào.</div></div>
-  <div id="th2" class="think" style="top:230px"><div class="b">Giả vờ nghe điện thoại. Không ai gọi cả.</div></div></div></div>
+<!-- 2. 5.3–7.8: tu chai nước -->
+<div id="s2" class="sc clip" data-start="5.3" data-duration="2.5" data-track-index="0"><div class="in"><img class="full" src="assets/canh-v3/canh-2-uong-nuoc.jpg"><div class="vig"></div>
+  <div id="th2" class="think" style="top:250px"><div class="b">Khoan. Uống miếng nước cái đã.</div></div></div></div>
 
-<!-- C 8.0–10.4: cầm tạ ngược -->
-<div id="sC" class="sc clip" data-start="8.0" data-duration="2.4" data-track-index="0"><div class="in"><img class="full" src="assets/canh/ta-nguoc.jpg"><div class="vig"></div>
-  <div id="th3" class="think" style="top:230px"><div class="b">Cầm vậy là đúng chưa ta?</div></div></div></div>
+<!-- 3. 7.8–8.6: cận chai nước vơi nửa -->
+<div id="s3" class="sc clip" data-start="7.8" data-duration="0.8" data-track-index="0"><div class="in"><img class="full" src="assets/canh-v3/canh-3-chai-nuoc.jpg"></div></div>
 
-<!-- D 10.4–13.2: anh cơ bắp đi tới (clip Kling) -->
-<video id="vD" class="clip full" src="assets/clip/di-toi.mp4" muted playsinline data-start="10.4" data-duration="2.8" data-track-index="0"></video>
-<div id="sD" class="sc clip" data-start="10.4" data-duration="2.8" data-track-index="1"><div class="in"><div class="vig"></div>
-  <div id="th4" class="think" style="top:230px"><div class="b">Thôi xong. Ảnh đi về phía mình.</div></div></div></div>
+<!-- 4. 8.6–10.2: có người giữ cửa -->
+<div id="s4" class="sc clip" data-start="8.6" data-duration="1.6" data-track-index="0"><div class="in"><img class="full" src="assets/canh-v3/canh-4-giu-cua.jpg"></div></div>
 
-<!-- E 13.2–17.2: nhạc tắt, anh cơ bắp chỉnh tạ giúp (clip Kling) -->
-<video id="vE" class="clip full" src="assets/clip/chinh.mp4" muted playsinline data-start="13.2" data-duration="4.0" data-track-index="0"></video>
-<div id="sE" class="sc clip" data-start="13.2" data-duration="4.0" data-track-index="1"><div class="in"><div class="vig"></div>
-  <div id="say" class="say" style="left:80px;width:760px;top:250px">"Cầm thế này nè. Hồi đầu anh cũng cầm ngược."</div></div></div>
+<!-- 5. 10.2–15.0: máy kéo xô, bị nhấc khỏi ghế (clip Kling) -->
+<video id="v5" class="clip full" src="assets/clip-v3/bi-nhac.mp4" muted playsinline data-start="10.2" data-duration="4.8" data-track-index="0"></video>
+<div id="s5" class="sc clip" data-start="10.2" data-duration="4.8" data-track-index="1"><div class="in"><div class="vig"></div>
+  <div id="th3" class="think" style="top:250px"><div class="b">Ủa. Kéo xuống mà mình bay lên.</div></div></div></div>
 
-<!-- F 17.2–20.6: Bé Đậu thở ra -->
-<div id="sF" class="sc clip" data-start="17.2" data-duration="3.4" data-track-index="0"><div class="in"><img id="imF" class="full" src="assets/canh/tha-ra.jpg"><div class="vig"></div>
-  <h1 id="tF1" class="big" style="top:230px;font-size:80px">Người tập lâu ai cũng từng <span>cầm ngược.</span></h1>
-  <h1 id="tF2" class="big" style="top:1330px;font-size:84px">Không biết thì <span>cứ hỏi.</span></h1></div></div>
+<!-- 6a. 15.0–17.9: liếc sang anh tập lâu -->
+<div id="s6a" class="sc clip" data-start="15.0" data-duration="2.9" data-track-index="0"><div class="in"><img id="im6a" class="full" src="assets/canh-v3/canh-6-anh-dung-canh.jpg" style="transform-origin:22% 42%"><div class="vig"></div>
+  <div id="th4" class="think" style="top:230px"><div class="b">Chắc ảnh đợi máy. Thôi, hỏi thử.</div></div></div></div>
 
-<!-- G 20.6–24.6: tai nghe, hiệp đầu tiên -->
-<video id="vG" class="clip full" src="assets/clip/tainghe.mp4" muted playsinline data-start="20.6" data-duration="4.0" data-track-index="0"></video>
-<div id="sG" class="sc clip" data-start="20.6" data-duration="4.0" data-track-index="1"><div class="in"><div class="vig"></div>
-  <h1 id="tD1" class="big" style="top:250px;font-size:120px"><span>Ngày 1/90.</span></h1>
-  <h1 id="tD2" class="big" style="top:420px;font-size:92px">Không bỏ về.</h1></div></div>
+<!-- 6b. 17.9–22.4: giơ tay hỏi -->
+<div id="s6b" class="sc clip" data-start="17.9" data-duration="4.5" data-track-index="0"><div class="in"><img id="im6b" class="full" src="assets/canh-v3/canh-6-anh-dung-canh.jpg" style="transform-origin:62% 45%"><div class="vig"></div>
+  <div id="say1" class="say bd" style="left:90px;width:800px;top:200px">"Anh ơi, máy này chỉnh sao vậy anh? Em tập nhanh rồi nhường anh."</div></div></div>
 
-<!-- H 24.6–28.6: giá squat, nuốt nước bọt -->
-<video id="vH" class="clip full" src="assets/clip/squat.mp4" muted playsinline data-start="24.6" data-duration="4.0" data-track-index="0"></video>
-<div id="sH" class="sc clip" data-start="24.6" data-duration="4.0" data-track-index="1"><div class="in"><div class="vig"></div>
-  <h1 id="tMai" class="big" style="top:250px;font-size:80px">Ngày mai: <span>cái máy to nhất phòng.</span></h1></div></div>
+<!-- 7. 22.4–26.4: anh tập lâu chỉ núm chỉnh đệm (clip Kling) -->
+<video id="v7" class="clip full" src="assets/clip-v3/chi-dem.mp4" muted playsinline data-start="22.4" data-duration="4.0" data-track-index="0"></video>
+<div id="s7" class="sc clip" data-start="22.4" data-duration="4.0" data-track-index="1"><div class="in"><div class="vig"></div>
+  <div id="say2" class="say" style="left:70px;width:800px;top:180px">"Hạ cái đệm này xuống nè. Anh không đợi máy đâu, em cứ tập."</div></div></div>
 
-<div id="fl1" class="flash clip" data-start="2.4" data-duration="0.2" data-track-index="3"></div>
-<div id="fl2" class="flash clip" data-start="8.0" data-duration="0.2" data-track-index="3"></div>
-<div id="fl3" class="flash clip" data-start="10.4" data-duration="0.2" data-track-index="3"></div>
-<div id="fl5" class="flash clip" data-start="20.6" data-duration="0.2" data-track-index="3"></div>
-<div id="fl6" class="flash clip" data-start="24.6" data-duration="0.2" data-track-index="3"></div>
+<!-- 8. 26.4–29.2: hạ đệm xong, kéo được -->
+<div id="s8" class="sc clip" data-start="26.4" data-duration="2.8" data-track-index="0"><div class="in">
+  <img id="im8a" class="full" src="assets/canh-v3/canh-8a-tay-tren.jpg"><img id="im8b" class="full" src="assets/canh-v3/canh-8b-keo-xuong.jpg" style="opacity:0"><div class="vig"></div>
+  <h1 id="tHoi" class="big" style="top:230px;font-size:84px">Không biết chỉnh máy thì <span>cứ hỏi người bên cạnh.</span></h1></div></div>
+
+<!-- 9. 29.2–32.4: tối ở nhà, gạch ô số 1 -->
+<div id="s9" class="sc clip" data-start="29.2" data-duration="3.2" data-track-index="0"><div class="in"><img id="im9" class="full" src="assets/canh-v3/canh-9-gach-lich.jpg"><div class="vig"></div>
+  <h1 id="tXong" class="big" style="top:1290px;font-size:84px"><span>Ngày 1/100:</span> xong.</h1>
+  <h1 id="tCon" class="big" style="top:1420px;font-size:76px">Còn 99 ngày.</h1></div></div>
+
+<div id="fl1" class="flash clip" data-start="5.3" data-duration="0.2" data-track-index="3"></div>
+<div id="fl2" class="flash clip" data-start="10.2" data-duration="0.2" data-track-index="3"></div>
+<div id="fl3" class="flash clip" data-start="15.0" data-duration="0.2" data-track-index="3"></div>
+<div id="fl4" class="flash clip" data-start="22.4" data-duration="0.2" data-track-index="3"></div>
+<div id="fl5" class="flash clip" data-start="26.4" data-duration="0.2" data-track-index="3"></div>
+<div id="fl6" class="flash clip" data-start="29.2" data-duration="0.2" data-track-index="3"></div>
 </div>
 
 <script>
@@ -95,46 +105,50 @@ const punch=(sel,t)=>tl.fromTo(sel,{scale:1.16},{scale:1,duration:.35,ease:"powe
 const kb=(sel,t,d,a=1.0,b=1.12)=>tl.fromTo(sel,{scale:a},{scale:b,duration:d,ease:"none"},t);
 const flash=(sel,t)=>tl.fromTo(sel,{opacity:.6},{opacity:0,duration:.18},t);
 const shake=(sel,t,n=8,x=12)=>tl.to(sel,{x:x,duration:.05,repeat:n,yoyo:true,ease:"none"},t).set(sel,{x:0},t+.05*(n+1));
-// bong bóng: hiện, chữ chạy từng từ trong khoảng giọng đọc [v0, v1], rồi tắt ở t1
-function bubble(sel,t0,v0,v1,t1){
+// bong bóng: hiện ở t0, chữ chạy từng từ trong khoảng giọng đọc [v0, v1], tắt ở t1
+function bubble(sel,t0,v0,v1,t1,tail="50% 100%"){
   const ws=document.querySelectorAll(sel+" .w");
-  tl.fromTo(sel,{opacity:0,y:30,scale:.85},{opacity:1,y:0,scale:1,duration:.25,ease:"back.out(2)"},t0);
+  tl.fromTo(sel,{opacity:0,y:30,scale:.85,transformOrigin:tail},{opacity:1,y:0,scale:1,duration:.25,ease:"back.out(2)"},t0);
   const step=(v1-v0)/ws.length;
   ws.forEach((w,i)=>tl.fromTo(w,{opacity:0},{opacity:1,duration:.12},v0+i*step));
   tl.to(sel,{opacity:0,duration:.18},t1-.18);
 }
 function pop(sel,t,from=2.2){tl.fromTo(sel,{opacity:0,scale:from},{opacity:1,scale:1,duration:.3,ease:"power4.out"},t);}
 
-// A
-kb("#vA",0,2.4,1.0,1.06);
-pop("#tPOV",.15,1.6);
-// B (giọng: 2.6–5.1, 5.3–7.9)
-punch("#sB .in",2.4);flash("#fl1",2.4);kb("#sB img",2.4,5.6,1.0,1.12);
-bubble("#th1",2.5,2.6,4.9,5.2);bubble("#th2",5.2,5.3,7.7,8.0);
-// C (giọng: 8.2–10.0)
-punch("#sC .in",8.0);flash("#fl2",8.0);kb("#sC img",8.0,2.4,1.0,1.08);
-bubble("#th3",8.1,8.2,9.8,10.4);
-// D (giọng: 10.6–12.9), camera dí dần, rung khi ảnh tới gần
-flash("#fl3",10.4);kb("#vD",10.4,2.8,1.0,1.12);
-bubble("#th4",10.5,10.6,12.6,13.2);
-shake("#sD .in",12.3,9,10);shake("#vD",12.3,9,10);
-// E: cắt cứng, nhạc tắt (giọng anh cơ bắp: 13.6–15.9)
-kb("#vE",13.2,4.0,1.0,1.05);
-tl.fromTo("#say",{opacity:0,scale:.4,transformOrigin:"25% 100%"},{opacity:1,scale:1,duration:.3,ease:"back.out(2.5)"},13.45);
-document.querySelectorAll("#say .w").forEach((w,i,a)=>tl.fromTo(w,{opacity:0},{opacity:1,duration:.1},13.6+i*(2.2/a.length)));
-tl.to("#say",{opacity:0,duration:.2},16.9);
-// F
-punch("#sF .in",17.2);kb("#imF",17.2,3.4,1.0,1.08);
-tl.fromTo("#tF1",{opacity:0,y:40},{opacity:1,y:0,duration:.4,ease:"back.out(2)"},17.35);
-pop("#tF2",18.7,1.8);
-// G
-flash("#fl5",20.6);punch("#sG .in",20.6);
-pop("#tD1",20.8,2.6);shake("#sG .in",20.95,5,12);
-tl.fromTo("#tD2",{opacity:0,y:50},{opacity:1,y:0,duration:.35,ease:"back.out(2)"},21.7);
-// H
-flash("#fl6",24.6);punch("#sH .in",24.6);
-tl.fromTo("#tMai",{opacity:0,y:-40},{opacity:1,y:0,duration:.4,ease:"back.out(2)"},25.0);
-shake("#sH .in",26.2,3,8);
+// 1. tên series rồi độc thoại (giọng 2.4–5.3)
+kb("#v1",0,5.3,1.0,1.06);
+tl.fromTo("#tSeri",{opacity:0,y:-20},{opacity:1,y:0,duration:.3},.1);
+pop("#tNgay",.3,1.6);
+tl.to("#tSeri,#tNgay",{opacity:0,duration:.2},2.1);
+bubble("#th1",2.3,2.4,5.0,5.3);
+// 2. (giọng 5.4–7.7)
+punch("#s2 .in",5.3);flash("#fl1",5.3);kb("#s2 img",5.3,2.5,1.0,1.08);
+bubble("#th2",5.35,5.4,7.5,7.8);
+// 3. cận chai nước, 4. có người giữ cửa
+punch("#s3 .in",7.8);kb("#s3 img",7.8,0.8,1.04,1.14);
+punch("#s4 .in",8.6);kb("#s4 img",8.6,1.6,1.0,1.06);
+// 5. bị nhấc khỏi ghế (giọng 10.7–13.1), rơi xuống ghế ở 14.05
+flash("#fl2",10.2);punch("#s5 .in",10.2);
+bubble("#th3",10.6,10.7,12.9,13.6);
+shake("#v5",14.05,4,10);
+// 6a. phóng vào anh tập lâu (giọng 15.15–17.8)
+flash("#fl3",15.0);kb("#im6a",15.0,2.9,1.45,1.55);
+bubble("#th4",15.1,15.15,17.5,17.9);
+// 6b. toàn cảnh, Bé Đậu giơ tay hỏi (giọng 18.05–22.2)
+kb("#im6b",17.9,4.5,1.0,1.1);
+bubble("#say1",17.95,18.05,21.8,22.4,"80% 100%");
+// 7. anh chỉ núm chỉnh đệm (giọng 22.55–25.8)
+flash("#fl4",22.4);kb("#v7",22.4,4.0,1.0,1.04);
+bubble("#say2",22.45,22.55,25.5,26.4,"25% 100%");
+// 8. kéo được: đổi 2 ảnh như đang kéo lên xuống
+flash("#fl5",26.4);punch("#s8 .in",26.4);
+[[27.0,1],[27.6,0],[28.2,1]].forEach(([t,o])=>tl.set("#im8b",{opacity:o},t));
+pop("#tHoi",26.6,1.8);
+// 9. gạch ô số 1
+flash("#fl6",29.2);punch("#s9 .in",29.2);kb("#im9",29.2,3.2,1.0,1.08);
+shake("#s9 .in",29.4,3,8);
+pop("#tXong",29.7,2.4);
+tl.fromTo("#tCon",{opacity:0,y:40},{opacity:1,y:0,duration:.35,ease:"back.out(2)"},30.5);
 
 window.__timelines["main"]=tl;tl.seek(0);
 </script>
